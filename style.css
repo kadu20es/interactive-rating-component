@@ -1,0 +1,26 @@
+* {
+    margin: 0;
+    margin: 0;
+    box-sizing: border-box; /* ao inserir um padding em uma div, o width não será afetado */
+}
+
+body {
+    background-color: rgb(20, 21, 25);
+    color: #FFF;
+}
+
+section {
+    /*background-color: linear-gradient(180deg, hsl(213, 19%, 18%), hsl(216, 12%, 8%));*/
+    background-color: cadetblue;
+    border-radius: 20px;
+    width: 415px;
+    height: 415px;
+    margin: auto;
+    top: -25%;
+    transform: translateY(25%);
+    padding: 30px;
+}
+
+img, header, .text {
+    display: block;
+}
