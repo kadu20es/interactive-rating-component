@@ -1,7 +1,11 @@
+@import url(https://fonts.google.com/specimen/Overpass);
+
 * {
     margin: 0;
     margin: 0;
     box-sizing: border-box; /* ao inserir um padding em uma div, o width não será afetado */
+    font-size: 15px;
+    font-family: Overpass, sans-serif;
 }
 
 body {
@@ -10,8 +14,8 @@ body {
 }
 
 section {
-    /*background-color: linear-gradient(180deg, hsl(213, 19%, 18%), hsl(216, 12%, 8%));*/
-    background-color: cadetblue;
+    background: linear-gradient(180deg, hsl(213, 19%, 18%), hsl(216, 12%, 8%));
+    /*background-color: cadetblue;*/
     border-radius: 20px;
     width: 415px;
     height: 415px;
@@ -23,4 +27,25 @@ section {
 
 img, header, .text {
     display: block;
+}
+
+.notes {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    align-content: center;
+    justify-content: space-between;
+    margin: 2em auto 2em auto;
+
+}
+
+.notes > div {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background-color: hsl(216, 12%, 54%);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
 }
