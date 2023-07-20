@@ -1,29 +1,19 @@
 let valor = 0;
-let temp = 0;
+let temp = null;
 let number = document.querySelector('.number');
 
 document.addEventListener('click', function (event) {
+    changeColor(event);
     if (event.target.matches('.number')) {
+        temp = event;
         valor = event.target.innerText;
-        if (valor != temp){
-            event.target.style.backgroundColor = "rgb(42, 46, 54)";
-            event.target.style.color = "rgb(156, 163, 173)";
-        }
-        valor = event.target.innerText;
-        temp = valor;
+        console.log(valor)
         let userChoice = {'value': valor};
         localStorage.setItem('userChoice', JSON.stringify(userChoice));
-        changeColor(event)
+        changeColor(event);
     }
 } )
 
-
-/*document.querySelector('.number4').addEventListener('click', function(event) {
-    valor = event.target.innerText;
-    /* acessa o local storage e guarda o valor, recuperando-o em seguida */
-   /* let userChoice = {'value': valor};
-    localStorage.setItem('userChoice', JSON.stringify(userChoice));
-});*/
 
 document.querySelector('#submit').addEventListener("click", function(event){
     event.preventDefault();
@@ -34,6 +24,11 @@ document.querySelector('#submit').addEventListener("click", function(event){
 });
 
 function changeColor(event){
+    if (temp != event && temp != null) {
+        temp.target.style.backgroundColor = "rgb(42, 46, 54)";
+        temp.target.style.color =  "rgb(124, 136, 152)";
+    }
     event.target.style.backgroundColor = "rgb(156, 163, 173)";
     event.target.style.color = "#FFF";
+
 }
