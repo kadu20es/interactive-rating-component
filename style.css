@@ -127,7 +127,7 @@ button:hover {
 .attribution { font-size: 11px; text-align: center; margin-top: 2em;}
 .attribution a { color: hsl(228, 45%, 44%); }
 
-@media screen and (min-width: 600px) and (max-width: 1280px) {
+@media screen and (min-width: 600px) {
     section {
         background: linear-gradient(180deg, hsl(213, 19%, 18%), hsl(216, 12%, 12%));
         border-radius: 20px;
