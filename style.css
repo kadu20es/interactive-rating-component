@@ -133,6 +133,7 @@ button:hover {
         width: 415px;
         height: 415px;
         padding: 30px;
+        margin: auto;
     }
 }
 

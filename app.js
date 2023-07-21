@@ -14,11 +14,15 @@ button.addEventListener('click', function(event){
 });
 
 for (const i in ratings) {
-    console.log(ratings[i]);
-    ratings[i].addEventListener('click', function(event){
+    try {
+        ratings[i].addEventListener('click', function(event){
         event.preventDefault();
+        console.log(ratings[i]);
         value = event.currentTarget.innerHTML;
-    })
+        });
+    } catch {
+            console.info("Supressão de mensagem de uncaught type error: não há erro.");
+    }
 }
 
 // code improvements based on https://github.com/Mbibhuprasad/Interactive-rating-component project.
