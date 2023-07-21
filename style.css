@@ -20,7 +20,7 @@ body {
     align-items: center;
 }
 
-section {
+.cardOne, .cardTwo {
     background: linear-gradient(180deg, hsl(213, 19%, 18%), hsl(216, 12%, 12%));
     border-radius: 20px;
     color: rgb(156, 163, 173);
@@ -53,7 +53,7 @@ header {
     line-height: 1.8em;
 }
 
-.notes {
+.ratings {
     display: flex;
     flex-direction: row;
     align-items: center;
@@ -66,28 +66,13 @@ header {
         color: #FFF;
     }
 }
-.number {
-    width: 50px;
-    height: 50px;
-    border-radius: 50%;
-    background-color: rgb(42, 46, 54);
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-}
-
-.checked {
-    background-color: rgb(124, 136, 152);
-    color: #FFF;
-}
 
 button {
     width: 100%;
     line-height: 3em;
     border: none;
     border-radius: 25px;
-    letter-spacing: 5px;
+    letter-spacing: 3px;
     font-weight: bold;
     text-transform: uppercase; /* converte texto minúsculo para maiúsculo*/
     color: #FFF;
@@ -97,6 +82,19 @@ button {
 button:hover {
     background-color: #FFF;
     color: hsl(25, 97%, 53%);
+}
+
+.number {
+    width: 50px;
+    display: block;
+    border-radius: 50%;
+    background-color: rgb(42, 46, 54);
+    text-align: center;
+}
+
+.number:focus {
+    background-color: rgb(124, 136, 152);
+    color: #FFF;
 }
 
 .icon2 > img {
@@ -127,7 +125,7 @@ button:hover {
 .attribution a { color: hsl(228, 45%, 44%); }
 
 @media screen and (min-width: 600px) {
-    section {
+    .cardOne, .cardTwo {
         background: linear-gradient(180deg, hsl(213, 19%, 18%), hsl(216, 12%, 12%));
         border-radius: 20px;
         color: rgb(156, 163, 173);
@@ -135,4 +133,8 @@ button:hover {
         height: 415px;
         padding: 30px;
     }
+}
+
+.cardTwo {
+    display: none;
 }

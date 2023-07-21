@@ -1,34 +1,24 @@
-let valor = 0;
-let temp = null;
-let number = document.querySelector('.number');
+const cardOne = document.querySelector('.cardOne');
+const cardTwo = document.querySelector('.cardTwo');
+const button = document.querySelector('#submit');
+const ratings = document.getElementsByClassName('number');
+const valor = document.getElementById("valor");
+let value = "none";
 
-document.addEventListener('click', function (event) {
-    changeColor(event);
-    if (event.target.matches('.number')) {
-        temp = event;
-        valor = event.target.innerText;
-        console.log(valor)
-        let userChoice = {'value': valor};
-        localStorage.setItem('userChoice', JSON.stringify(userChoice));
-        changeColor(event);
-    }
-} )
-
-
-document.querySelector('#submit').addEventListener("click", function(event){
+button.addEventListener('click', function(event){
     event.preventDefault();
-    window.location.href = "./result.html";
-    let text = document.createTextNode(valor);
-    document.querySelector('value').appendChild(text);
-
+    cardOne.style.display = "none";
+    cardTwo.style.display = "block";
+    let text = document.createTextNode(value);
+    valor.appendChild(text);
 });
 
-function changeColor(event){
-    if (temp != event && temp != null) {
-        temp.target.style.backgroundColor = "rgb(42, 46, 54)";
-        temp.target.style.color =  "rgb(124, 136, 152)";
-    }
-    event.target.style.backgroundColor = "rgb(156, 163, 173)";
-    event.target.style.color = "#FFF";
-
+for (const i in ratings) {
+    console.log(ratings[i]);
+    ratings[i].addEventListener('click', function(event){
+        event.preventDefault();
+        value = event.currentTarget.innerHTML;
+    })
 }
+
+// code improvements based on https://github.com/Mbibhuprasad/Interactive-rating-component project.
