@@ -42,7 +42,7 @@ body {
     }
 }
 
-header {
+.header {
     color: #FFF;
     font-size: 1.8em;
     font-weight: 700;
@@ -50,7 +50,7 @@ header {
     margin-top: 0.5em;
 }
 
-.text {
+.text1 {
     line-height: 1.8em;
 }
 
@@ -114,8 +114,12 @@ button:hover {
 }
 
 .thx {
-    text-align: center;
+    color: #FFF;
+    font-size: 1.8em;
     font-weight: 500;
+    line-height: 2em;
+    margin-top: 0.5em;
+    text-align: center;
 }
 .text2 {
     text-align: center;
